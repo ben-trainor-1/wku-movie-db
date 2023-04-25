@@ -1,6 +1,6 @@
 # **Movie/TV Show Database**
 ### *Takes 2 csv files and displays movies and their titles alongside tallies of each title's number of credited directors and actors.*
-#
+
 ## Technologies
 - Bootstrap v5.1
 - PHP
