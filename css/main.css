@@ -1,0 +1,73 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1, h2, h3, h4, h5, h6, div, p, header, footer, body, form, input, button {
+    font-family: "Inter Tight", "Helvetica Neue", "Helvetica", "sans-serif";
+}
+
+
+/* Background colors */
+body {
+    background-color: #afb3bb;
+}
+body > div > div:nth-of-type(2) {
+    background-color: white;
+}
+
+    
+/* Borders for checking layout */
+.border-red {
+    border: 1px solid red;
+}
+.border-blue {
+    border: 1px solid blue;
+}
+.border-green {
+    border: 1px solid green;
+}
+.border-purple {
+    border: 1px solid purple;
+}
+
+
+/* Table styles */
+tr {
+    margin: 0;
+    padding: 0;
+}
+td {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Form styles */
+#search::before {
+    opacity: .8;
+}
+#search {
+    background-image: url('../img/search_icon.png');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position-y: center;
+    background-position-x: 4px;
+    padding-left: 36px;   
+}
+#form_container {
+    top: 25%;
+}
+@media only screen and (min-width: 992px) {
+    #form_container > div:nth-of-type(2) {
+        border-radius: 5px;
+        border: 1px solid rgb(162, 162, 162);
+    }
+}
+@media only screen and (max-width: 991px) {
+    #form_container > div:nth-of-type(2) {
+        border-radius: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 1px solid rgb(162, 162, 162);
+        border-bottom: 1px solid rgb(162, 162, 162);
+    }
+}
