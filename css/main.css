@@ -42,6 +42,15 @@ td {
     margin: 0;
     padding: 0;
 }
+.link-unstyled, .link-unstyled:visited {
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+}
+.link-unstyled:hover, .link-unstyled:active {
+    color: #cbced4;
+    text-decoration: none;
+}
 
 
 /* Form styles */

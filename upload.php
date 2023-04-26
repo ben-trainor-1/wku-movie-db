@@ -31,7 +31,7 @@
             <!-- Table display -->
             <div class="row m-0 p-0">
                 
-                <table id="movie_table" class="table m-0 p-0">
+                <table id="movie_table" class="table sortable asc m-0 p-0">
 
                     <!-- Process csv and display -->
                     <?php
@@ -214,17 +214,21 @@
                                 for ($i = 0; $i < sizeof($finalTable); $i++) {
                                     // Header row
                                     if ($i == 0) {
-                                        echo "<tr class=\"table bg-primary text-white border-0 m-0 p-0\">";
+                                        echo "<thead><tr class=\"bg-primary text-white border-0 m-0 p-0\">";
                                         for ($j = 0; $j < sizeof($finalTable[$i]); $j++) {
                                             // Add onclick events for sorting by columns
                                             if ($j == 0) {
-                                                echo "<th class=\"border-0 fw-bold fs-3 text-start m-0 p-3\" onclick=\"sortTable($j)\">" . $finalTable[$i][$j] . "</th>";
+                                                echo "<th class=\"border-0 fw-bold fs-3 text-start m-0 p-3\">
+                                                <a href=\"#\" class=\"link-unstyled\">"
+                                                . $finalTable[$i][$j] . "</a></th>";
                                             }
                                             else {
-                                                echo "<th class=\"border-0 fw-bold fs-3 text-center m-0 p-3\" onclick=\"sortTable($j)\">" . $finalTable[$i][$j] . "</th>";
+                                                echo "<th class=\"border-0 fw-bold fs-3 text-center m-0 p-3\">
+                                                <a href=\"#\" class=\"link-unstyled\">"
+                                                . $finalTable[$i][$j] . "</a></th>";
                                             }
                                         }
-                                        echo "</tr>";
+                                        echo "</tr></thead><tbody>";
                                     }
                                     // Other rows
                                     else {
@@ -242,6 +246,7 @@
                                         echo "</tr>";
                                     }
                                 }
+                                echo "</tbody>";
 
                             }
                             // Shouldn't be reachable, but just in case
