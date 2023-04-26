@@ -28,7 +28,9 @@
 - Click on table headers to 
 
 ## Limitations
-- Cannot handle re-organized good data
+- Data must be input according to
+  - `titles.csv` -> id,title,type,description,release_year,age_certification,runtime,genres,production_countries,seasons,imdb_id,imdb_score,imdb_votes,tmdb_popularity,tmdb_score
+  - `credits.csv` -> person_id,id,name,character,role
 - Certainly will do strange things with bad data
 - With two csv's at about 32,000 lines, it still takes around 6 seconds to initially load the data and display the table on a local environment. It will likely run much more slowly on a real server.
 - Only searches the titles column
