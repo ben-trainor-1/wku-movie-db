@@ -42,8 +42,11 @@
                         $count = count($_FILES["files"]["name"]);
 
                         // Make sure the user uploaded 2 files
-                        if ($count != 2) {
+                        if ($count != 2 && $_FILES["files"]["name"][0] > -1) {
                             echo "<p class=\"m-0 p-4 pb-0\">You should have uploaded <b>2 files</b>, not <b>$count</b>.</p>";
+                        }
+                        else if ($count == 1) {
+                            echo "<p class=\"m-0 p-4 pb-0\">You did not upload any files.</p>";
                         }
                         else {
 
