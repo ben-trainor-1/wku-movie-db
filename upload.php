@@ -111,7 +111,7 @@
                             displayTable();
                         }
                         else {
-                            echo "<p class=\"m-0 p-4\"><a href=\"index.html\">Go back</a></p>";
+                            echo "<p class=\"m-0 p-4\"><a href=\"index.php\">Go back</a></p>";
                         }
 
                         function displayTable() {
