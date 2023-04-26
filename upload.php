@@ -35,22 +35,38 @@
 
                     <!-- Process csv and display -->
                     <?php
-
+                        
                         // Upload files to XAMPP temp folder
                         $targetDir = "../../temp/";
                         $files = array_filter($_FILES["files"]["name"]);
                         $count = count($_FILES["files"]["name"]);
+                        $initCheck = true;
 
-                        // Make sure the user uploaded 2 files
-                        // Not 2 files and the array's first element isn't null
-                        if ($count != 2 && $_FILES["files"]["name"][0] != null) {
-                            echo "<p class=\"m-0 p-4 pb-0\">You should have uploaded <b>2 files</b>, not <b>$count</b>.</p>";
-                        }
-                        // User didn't upload any files
-                        else if ($count == 1 && $_FILES["files"]["name"][0] == null) {
+
+                        // No files uploaded
+                        if ($count == 1 && $_FILES["files"]["name"][0] == null) {
                             echo "<p class=\"m-0 p-4 pb-0\">You did not upload any files.</p>";
+                            $initCheck = false;
                         }
+                        // 1 or > 2 files uploaded
+                        else if ($count != 2 && $_FILES["files"]["name"][0] != null) {
+                            echo "<p class=\"m-0 p-4 pb-0\">You should have uploaded <b>2 files</b>, not <b>$count</b>.</p>";
+                            $initCheck = false;
+                        }
+                        // Wrong file types
                         else {
+                            $initCheck = true;
+                            for ($i = 0; $i < $count; $i++) {
+                                if (strtolower(pathinfo($_FILES["files"]["name"][$i], PATHINFO_EXTENSION)) != "csv") {
+                                    $initCheck = false;
+                                    echo "<p class=\"m-0 p-4 pb-0\">Please only upload <b>.csv</b> files.</p>";
+                                    break;
+                                }
+                            }
+                        }
+
+                        // Passed all checks
+                        if ($initCheck == true) {
 
                             for ($i = 0; $i < $count; $i++) {
                                 
@@ -66,11 +82,6 @@
                                     // Check file size
                                     if ($_FILES["files"]["size"][$i] > 500000000) {
                                         echo "<p class=\"m-0 p-4 pb-0\">Sorry, your file is <b>too large</b>.</p>";
-                                        $uploadOk = false;
-                                    }
-                                    // Check file type
-                                    if ($fileType != "csv" && $uploadOk) {
-                                        echo "<p class=\"m-0 p-4 pb-0\">Please upload only <b>.csv</b> files.</p>";
                                         $uploadOk = false;
                                     }
                                     // Make sure file was processed correctly
