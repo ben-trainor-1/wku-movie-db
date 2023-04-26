@@ -107,7 +107,7 @@
 
                         }
 
-                        if ($uploadOk == true) {
+                        if ($uploadOk == true && $initCheck == true) {
                             displayTable();
                         }
                         else {
@@ -194,12 +194,17 @@
                                 // Display movie and show counts
                                 echo "
                                     <div class=\"row m-0 p-3\">
-                                        <div class=\"col-md-6 m-0 p-0\">
-                                            <h2 class=\"m-0 p-0 pb-2\">Number of movies: <b>" . $movieCount . "</b>
-                                            <h2 class=\"m-0 p-0\">Number of shows: <b>" . $showCount . "</b>
+                                        <div class=\"row border-bottom m-0 pt-0 pb-3\">
+                                            <h1 class=\"text-center m-0 p-0 fw-bold\">Results</h1>
                                         </div>
-                                        <div class=\"col-md-6 m-0 p-0\">
-                                            <input class=\"form-control\" type=\"text\" id=\"search\" onkeyup=\"searchTable()\" placeholder=\"Search for movies or shows...\">
+                                        <div class=\"row m-0 pt-3 pb-0\">
+                                            <div class=\"col-md-6 m-0 p-0\">
+                                                <h2 class=\"m-0 p-0 pb-2\">Number of movies: <b>" . $movieCount . "</b>
+                                                <h2 class=\"m-0 p-0\">Number of shows: <b>" . $showCount . "</b>
+                                            </div>
+                                            <div class=\"col-md-6 m-0 p-0\">
+                                                <input class=\"form-control\" type=\"text\" id=\"search\" onkeyup=\"searchTable()\" placeholder=\"Search for movies or shows...\">
+                                            </div>
                                         </div>
                                     </div>
                                 ";
@@ -208,7 +213,7 @@
                                 for ($i = 0; $i < sizeof($finalTable); $i++) {
                                     // Header row
                                     if ($i == 0) {
-                                        echo "<thead class=\"table-dark border-0 m-0 p-0\">";
+                                        echo "<thead class=\"table bg-primary text-white border-0 m-0 p-0\">";
                                         for ($j = 0; $j < sizeof($finalTable[$i]); $j++) {
                                             if ($j == 0) {
                                                 echo "<td class=\"border-0 fw-bold fs-3 text-start m-0 p-3\">" . $finalTable[$i][$j] . "</td>";
