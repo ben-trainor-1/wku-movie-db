@@ -1,7 +1,10 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-h1, h2, h3, h4, h5, h6, div, p, header, footer, body, form, input, button {
+h1, h2, h3, h4, h5, h6, div, p, header, footer, body, form, input, button, .form-control {
+    font-family: "Inter Tight", "Helvetica Neue", "Helvetica", "sans-serif";
+}
+.form-control::placeholder {
     font-family: "Inter Tight", "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
@@ -51,7 +54,10 @@ td {
     background-size: 30px 30px;
     background-position-y: center;
     background-position-x: 4px;
-    padding-left: 36px;   
+    padding-left: 36px;
+}
+#search_label {
+    padding-left: 5px;
 }
 #form_container {
     top: 25%;
