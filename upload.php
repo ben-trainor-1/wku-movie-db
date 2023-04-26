@@ -42,7 +42,6 @@
                         $count = count($_FILES["files"]["name"]);
                         $initCheck = true;
 
-
                         // No files uploaded
                         if ($count == 1 && $_FILES["files"]["name"][0] == null) {
                             echo "<p class=\"m-0 p-4 pb-0\">You did not upload any files.</p>";
