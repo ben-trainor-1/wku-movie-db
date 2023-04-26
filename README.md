@@ -13,7 +13,7 @@
 - Handles large amounts of data
 - Responsive UI fits on large and small screens
 - Fast JavaScript-powered search and sort functionalities
-- Rudimentary error handling prevents:
+- Error handling prevents:
   - Incorrect number of submitted files
   - Incorrect format of submitted files
 - Convenient "Go back" button after submission errors
