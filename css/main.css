@@ -59,6 +59,34 @@ th a {
     margin: -10em;
     padding: 10em;
 }
+/* From sortable */
+.sortable th > a::after {
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-left: 3px;
+    content: "▸";
+}
+.sortable th > a:hover::after {
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: inherit;
+}
+.sortable th.dir-d > a::after {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    vertical-align: middle;
+    color: inherit;
+    content: "\25BC";
+}
+.sortable th.dir-u > a::after {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    vertical-align: middle;
+    color: inherit;
+    content: "\25B2";
+}
 
 
 /* Form styles */
