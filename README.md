@@ -8,6 +8,7 @@
 - HTML5
 - JavaScript
 - Built using XAMPP and VSCode
+- Column sorting powered by https://github.com/tofsjonas/sortable
 
 ## Features
 - Handles large amounts of data
@@ -24,6 +25,7 @@
 - Files must be named `titles.csv` and `credits.csv`
 - Submit both files at once on the home page
 - Search for specific titles using the search bar
+- Click on table headers to 
 
 ## Limitations
 - Cannot handle re-organized good data
