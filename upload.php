@@ -216,11 +216,12 @@
                                     if ($i == 0) {
                                         echo "<tr class=\"table bg-primary text-white border-0 m-0 p-0\">";
                                         for ($j = 0; $j < sizeof($finalTable[$i]); $j++) {
+                                            // Add onclick events for sorting by columns
                                             if ($j == 0) {
-                                                echo "<th class=\"border-0 fw-bold fs-3 text-start m-0 p-3\">" . $finalTable[$i][$j] . "</th>";
+                                                echo "<th class=\"border-0 fw-bold fs-3 text-start m-0 p-3\" onclick=\"sortTable($j)\">" . $finalTable[$i][$j] . "</th>";
                                             }
                                             else {
-                                                echo "<th class=\"border-0 fw-bold fs-3 text-center m-0 p-3\">" . $finalTable[$i][$j] . "</th>";
+                                                echo "<th class=\"border-0 fw-bold fs-3 text-center m-0 p-3\" onclick=\"sortTable($j)\">" . $finalTable[$i][$j] . "</th>";
                                             }
                                         }
                                         echo "</tr>";
