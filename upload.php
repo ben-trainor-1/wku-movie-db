@@ -202,7 +202,7 @@
                                                 <h2 class=\"m-0 p-0 pb-2\">Number of movies: <b>" . $movieCount . "</b>
                                                 <h2 class=\"m-0 p-0\">Number of shows: <b>" . $showCount . "</b>
                                             </div>
-                                            <div class=\"col-md-6 m-0 p-0\">
+                                            <div class=\"col-md-6 m-0 p-0 pt-md-0 pb-md-0 pt-3 pb-2\">
                                                 <input class=\"form-control\" type=\"text\" id=\"search\" onkeyup=\"searchTable()\" placeholder=\"Search for movies or shows...\">
                                             </div>
                                         </div>
