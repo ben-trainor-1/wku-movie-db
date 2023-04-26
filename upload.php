@@ -214,16 +214,16 @@
                                 for ($i = 0; $i < sizeof($finalTable); $i++) {
                                     // Header row
                                     if ($i == 0) {
-                                        echo "<thead class=\"table bg-primary text-white border-0 m-0 p-0\">";
+                                        echo "<tr class=\"table bg-primary text-white border-0 m-0 p-0\">";
                                         for ($j = 0; $j < sizeof($finalTable[$i]); $j++) {
                                             if ($j == 0) {
-                                                echo "<td class=\"border-0 fw-bold fs-3 text-start m-0 p-3\">" . $finalTable[$i][$j] . "</td>";
+                                                echo "<th class=\"border-0 fw-bold fs-3 text-start m-0 p-3\">" . $finalTable[$i][$j] . "</th>";
                                             }
                                             else {
-                                                echo "<td class=\"border-0 fw-bold fs-3 text-center m-0 p-3\">" . $finalTable[$i][$j] . "</td>";
+                                                echo "<th class=\"border-0 fw-bold fs-3 text-center m-0 p-3\">" . $finalTable[$i][$j] . "</th>";
                                             }
                                         }
-                                        echo "</thead>";
+                                        echo "</tr>";
                                     }
                                     // Other rows
                                     else {
