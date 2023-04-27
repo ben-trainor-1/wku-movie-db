@@ -25,7 +25,7 @@
 - Files must be named `titles.csv` and `credits.csv`
 - Submit both files at once on the home page
 - Search for specific titles using the search bar
-- Click on table headers to 
+- Click on table headers to sort in ascending/descending order by column
 
 ## Limitations
 - Columns must be in the following order:
